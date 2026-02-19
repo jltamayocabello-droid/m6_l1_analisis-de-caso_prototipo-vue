@@ -6,7 +6,7 @@
       <div class="navbar-nav">
         <RouterLink class="nav-link" to="/">Inicio</RouterLink>
         <RouterLink class="nav-link" to="/tareas">Tareas</RouterLink>
-        <RouterLink class="nav-link" to="/perfil">Perfil</RouterLink>
+       
       </div>
     </div>
   </nav>
