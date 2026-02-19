@@ -14,7 +14,7 @@
             </div>
 
             <div class="mb-3">
-              <label for="form-label">Desripción</label>
+              <label for="form-label">Descripción</label>
               <textarea class="form-control" required v-model="descripcion"></textarea>
             </div>
 
