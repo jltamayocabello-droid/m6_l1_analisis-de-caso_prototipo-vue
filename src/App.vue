@@ -4,11 +4,6 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import PerfilUsuario from './components/PerfilUsuario.vue'
-
-export default {
-  name: 'App',
-  components: { PerfilUsuario }
-}
 </script>

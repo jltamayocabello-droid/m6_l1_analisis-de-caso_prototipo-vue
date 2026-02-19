@@ -1,5 +1,6 @@
 <template>
   <div class="perfil">
+    
     <!-- BINDING BIDIRECCIONAL -->
     <div class="campo">
       <label for="nombre"> Editar Nombre </label>
