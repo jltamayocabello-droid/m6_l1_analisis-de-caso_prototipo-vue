@@ -13,7 +13,7 @@
     <!-- TARJETA USUARIO -->
 
     <div>
-        <TarjetaUsuario :nombre="nombre" :contador="contador" @reset="resetContador" />
+        <TarjetaUsuario :nombre="nombre" :contador="contador" @reset="resetContador" @incrementar="incrementar" />
     </div>
 
   </div>
@@ -26,9 +26,9 @@ import TarjetaUsuario from './TarjetaUsuario.vue'
 const nombre = ref('Usuario')
 const contador = ref(0)
 
-// function incrementar() {
-//  contador.value++
-// }
+function incrementar() {
+  contador.value++
+ }
 
 // Reset Contador
 function resetContador() {
