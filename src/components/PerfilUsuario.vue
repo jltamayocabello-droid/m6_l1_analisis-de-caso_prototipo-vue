@@ -1,24 +1,42 @@
 <template>
   <div class="perfil">
-    
     <!-- BINDING BIDIRECCIONAL -->
+
+    
+
     <div class="campo">
-      <label for="nombre"> Editar Nombre </label>
+        <h2 class="text-center">Bienvenido al prototipo de prueba de Vue.js</h2>
+      <label for="nombre"> Introduzca su nombre </label>
       <input id="nombre" v-model="nombre" placeholder="Escribe tu nombre..." />
     </div>
 
     <!--BINDING UNIDIRECCIONAL-->
 
-    <h2>Bienvenido, {{ nombre }}</h2>
+    
 
     <!--CONTADOR-->
-    <p class="contador">Contador: {{ contador }}</p>
-    <button @click="incrementar">Incrementar</button>
+    <div>
+        <h2 class="text-center">Contador</h2>
+      <p class="contador">Contador: {{ contador }}</p>
+      <button @click="incrementar">Incrementar</button>
+    </div>
+
+    <!-- TARJETA USUARIO -->
+
+    <div>
+        <h2 class="text-center">TarjetaUsuario</h2>
+        <TarjetaUsuario :nombre="nombre" :contador="contador" @reset="resetContador" />
+    </div>
+
+
+
+
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import TarjetaUsuario from './TarjetaUsuario.vue'
 
 // Equivale a data()
 const nombre = ref('Usuario')
@@ -27,6 +45,11 @@ const contador = ref(0)
 // Equivale a methods
 function incrementar() {
   contador.value++
+}
+
+// Reset Contador
+function resetContador() {
+  contador.value = 0
 }
 </script>
 
