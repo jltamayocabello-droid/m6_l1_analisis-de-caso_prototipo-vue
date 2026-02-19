@@ -15,14 +15,14 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue'
+
 defineProps({
   tarea: Object,
 })
 const emit = defineEmits(['eliminar'])
 
 const eliminarTarea = (id, titulo) => {
-  let confirmacion = confirm(`¿Está seguro que desea aliminar la tarea ${titulo}./nID ${id}?`)
+  let confirmacion = confirm(`¿Está seguro que desea eliminar la tarea ${titulo}?\nID: ${id}`)
 
   if (confirmacion) {
     emit('eliminar', id)

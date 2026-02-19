@@ -1,18 +1,15 @@
 <template>
   <header>
-    <h1 class="text-center py-3">Prototipo FrontTech</h1>
+    <NavBar />
   </header>
 
   <main class="container">
-     <RouterView />
-
+    <RouterView />
   </main>
 </template>
 
 <script setup>
-
+import NavBar from './components/NavBar.vue'
 </script>
 
-<style scoped lang="css">
-
-</style>
+<style scoped lang="css"></style>

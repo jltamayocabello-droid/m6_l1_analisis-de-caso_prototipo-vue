@@ -1,4 +1,6 @@
 <template>
+  
+  <h2 class="text-center">Agregar Tareas</h2>
   <section>
     <div class="row justify-content-center">
       <div class="col-12 col-md-6">
@@ -52,8 +54,10 @@ const crearTarea = () => { const nuevaTarea = {
     descripcion: descripcion.value,
     responsable: responsable.value,
   }
-  tareas.value.push(nuevaTarea)}
-  resetForm()
+  tareas.value.push(nuevaTarea)
+resetForm()
+}
+  
 
 const eliminarTarea = (id) => { 
   tareas.value = tareas.value.filter((tarea) => tarea.id !== id)
