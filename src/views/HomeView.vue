@@ -16,9 +16,13 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import TarjetaUsuario from '../components/TarjetaUsuario.vue'
 
-const nombre = ref('')
+const nombre = ref(localStorage.getItem('nombre') || '')
 const contador = ref(0)
+
+watch(nombre, (nuevoNombre) => {
+  localStorage.setItem('nombre', nuevoNombre)
+})
 </script>

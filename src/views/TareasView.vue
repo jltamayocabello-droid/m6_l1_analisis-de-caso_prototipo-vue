@@ -46,7 +46,7 @@ import { v4 as uuidv4 } from 'uuid'
 const tareas = ref([])
 const titulo = ref('')
 const descripcion = ref('')
-const responsable = ref('')
+const responsable = ref(localStorage.getItem('nombre') || '')
 
 const crearTarea = () => { const nuevaTarea = {
     id: uuidv4(),
