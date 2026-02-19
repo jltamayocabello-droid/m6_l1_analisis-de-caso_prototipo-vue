@@ -1,35 +1,41 @@
 <template>
-  <header class="py-3">
-    <h1 class="text-center">Prototipo Front Tech</h1>
+  <header>
+    <h1 class="text-center py-3">Prototipo Front Tech</h1>
   </header>
+
   <main class="container">
     <section>
       <div class="row justify-content-center">
         <div class="col-12 col-md-6">
           <form @submit.prevent="crearTarea">
             <div class="mb-3">
-              <label for="" class="form-label">Titulo</label>
+              <label for="form-label">Titulo</label>
               <input type="text" class="form-control" required v-model="titulo" />
             </div>
+
             <div class="mb-3">
-              <label for="" class="form-label">Descripción</label>
+              <label for="form-label">Desripción</label>
               <textarea class="form-control" required v-model="descripcion"></textarea>
             </div>
+
             <div class="mb-3">
-              <label for="" class="form-label">Responsable</label>
+              <label for="form-label">Responsable</label>
               <input type="text" class="form-control" required v-model="responsable" />
             </div>
+
             <div>
-              <button class="btn btn-primary">Crear tarea</button>
+              <button class="btn btn-primary">Crear Tarea</button>
             </div>
           </form>
         </div>
       </div>
     </section>
+
     <div class="row py-3" v-if="tareas.length">
-      <h3 class="text-center">Listado de Tareas</h3>
-      <div class="col-12 col-md-4 col-lg-3" style="mx-width" v-for="(tarea, index) in tareas" :key="index">
-        <CardTareaComp />
+      <h2 class="text-center py-3">Listado de Tareas</h2>
+
+      <div class="col-12 col-md-4 col-lg-3" v-for="(tarea, index) in tareas" :key="index">
+        <CardTareaComp :tarea="tarea" @eliminar="eliminarTarea" />
       </div>
     </div>
   </main>
@@ -40,12 +46,30 @@
 
 <script setup>
 import { ref } from 'vue'
+import CardTareaComp from './components/CardTareaComp.vue'
+import { v4 as uuidv4 } from 'uuid'
 
 const tareas = ref([])
-
 const titulo = ref('')
 const descripcion = ref('')
 const responsable = ref('')
+
+const crearTarea = () => {
+  const nuevaTarea = {
+    id: uuidv4(),
+    titulo: titulo.value,
+    descripcion: descripcion.value,
+    responsable: responsable.value,
+  }
+
+  tareas.value.push(nuevaTarea)
+  resetForm()
+}
+
+const eliminarTarea = (id) => {
+  tareas.value = tareas.value.filter((tarea) => tarea.id != id)
+  alert('Tarea eliminada con éxito.')
+}
 
 const resetForm = () => {
   titulo.value = ''
@@ -53,21 +77,7 @@ const resetForm = () => {
   responsable.value = ''
 }
 
-tareas.value.push({})
-resetForm()
-
-const crearTarea = () => {
-  const nuevaTarea = {
-    titulo: titulo.value,
-    descripcion: descripcion.value,
-    responsable: responsable.value,
-  }
-
-  tareas.value.push(nuevaTarea)
-}
-
 import PerfilUsuario from './components/PerfilUsuario.vue'
-import CardTareaComp from './components/CardTareaComp.vue'
 </script>
 
 <style scoped lang="css">
