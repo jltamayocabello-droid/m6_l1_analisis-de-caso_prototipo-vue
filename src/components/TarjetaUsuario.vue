@@ -3,9 +3,10 @@
 
 <div>
 
-    <h2>{{ props.nombre }}</h2>
-    <p>Contador: {{ props.contador }}</p>
-    <button @click="emit('reset')">Reset</button>
+    <h3 class="text-center">Tarjeta de {{ props.nombre }}</h3>
+    <p class="contador">Contador: {{ props.contador }}</p>
+    <button @click="emit('incrementar')">Incrementar</button>
+    <button @click="emit('reset')">Reiniciar</button>
 </div>
 
 </template>
@@ -17,6 +18,30 @@ const props = defineProps({
     contador: Number
 })
 
-const emit = defineEmits(['reset'])
+const emit = defineEmits(['incrementar', 'reset'])
+
+
 
 </script>
+
+<style scoped>
+
+.contador {
+  font-size: 1.2rem;
+  margin: 1rem 0 0.5rem;
+}
+
+button {
+  padding: 0.5rem 1.2rem;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #2563eb;
+}
+</style>
