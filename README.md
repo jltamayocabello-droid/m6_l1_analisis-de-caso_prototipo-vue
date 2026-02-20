@@ -1,7 +1,7 @@
 # 📝 PROYECTO ABP M6: FrontTech Prototipo Vue
 
 ![Estado del Proyecto](https://img.shields.io/badge/Estado-Finalizado-yellow)
-![Stack](https://img.shields.io/badge/Stack-Vue.js_3_%7C_Vue_Router_%7C_CSS-blue)
+![Stack](https://img.shields.io/badge/Stack-Vue.js_3_%7C_Vue_Router_%7C_Bootstrap_5_%7C_CSS-blue)
 
 ---
 
@@ -67,6 +67,7 @@ Este proyecto cumple con los siguientes criterios del análisis de caso:
 
 - **Vue.js 3** (Composition API con `<script setup>`): Framework progresivo principal.
 - **Vue Router 4**: Enrutamiento entre vistas SPA.
+- **Bootstrap 5**: Sistema de grillas y clases utilitarias para el layout base.
 - **CSS Scoped**: Estilos encapsulados por componente, paleta dark navy/slate.
 - **uuid**: Generación de IDs únicos para tareas.
 - **LocalStorage API**: Persistencia del nombre de usuario.
@@ -186,8 +187,12 @@ npm run dev
 
 ## 🌐 Despliegue (Demo)
 
-> Proyecto desplegado en GitHub Pages:  
-> 🔗 [https://jltamayocabello-droid.github.io/m6_l1_analisis-de-caso_prototipo-vue/](https://jltamayocabello-droid.github.io/m6_l1_analisis-de-caso_prototipo-vue/)
+- **Repositorio GitHub**:
+
+  > 🔗 [https://github.com/jltamayocabello-droid/m6_l1_analisis-de-caso_prototipo-vue](https://github.com/jltamayocabello-droid/m6_l1_analisis-de-caso_prototipo-vue)
+
+- **Deploy del proyecto**:
+  > 🔗 [https://jltamayocabello-droid.github.io/m6_l1_analisis-de-caso_prototipo-vue/](https://jltamayocabello-droid.github.io/m6_l1_analisis-de-caso_prototipo-vue/)
 
 ---
 
