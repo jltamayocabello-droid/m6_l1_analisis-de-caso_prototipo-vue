@@ -6,8 +6,8 @@
         FrontTech |
       </span>
       <div class="nav-links">
-        <RouterLink class="nav-link" to="/">Inicio</RouterLink>
-        <RouterLink class="nav-link" to="/tareas">Tareas</RouterLink>
+        <RouterLink class="nav-link" to="/"><strong>Inicio</strong></RouterLink>
+        <RouterLink class="nav-link" to="/tareas"><strong>Lista de Tareas</strong></RouterLink>
       </div>
     </div>
   </nav>

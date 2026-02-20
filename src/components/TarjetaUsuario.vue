@@ -13,7 +13,7 @@
       </div>
 
       <h3 class="bienvenida">
-        Bienvenido, <strong>{{ props.nombre }}</strong>
+        Bienvenido, <strong>{{ props.nombre }}, </strong> ahora puedes agregar tus tareas en la <strong>Lista de tareas</strong>.
       </h3>
 
       <div class="contador-box">
