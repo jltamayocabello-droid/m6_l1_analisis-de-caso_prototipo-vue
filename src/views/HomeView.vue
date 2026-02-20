@@ -1,15 +1,15 @@
 <template>
   <section class="row justify-content-center py-4">
     <div class="campo col-12 col-md-6">
-      <h2 class="text-center">Bienvenido</h2>
+      <h2 class="text-center">Bienvenido a FrontTech</h2>
       <label for="nombre">Nombre de Usuario</label>
       <input id="nombre" class="form-control" v-model="nombre" placeholder="Escribe tu nombre..." />
 
       <TarjetaUsuario
         :nombre="nombre"
         :contador="contador"
-        @incrementar="contador++"
-        @reset="contador = 0"
+        @incrementar="incrementar"
+        @reset="resetContador"
       />
     </div>
   </section>
@@ -25,4 +25,12 @@ const contador = ref(0)
 watch(nombre, (nuevoNombre) => {
   localStorage.setItem('nombre', nuevoNombre)
 })
+
+function incrementar() {
+  contador.value++
+}
+
+function resetContador() {
+  contador.value = 0
+}
 </script>
