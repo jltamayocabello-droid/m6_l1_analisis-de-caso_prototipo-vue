@@ -254,9 +254,9 @@ npm run dev
 
 ---
 
-## 🤔 Reflexión sobre la adopción de Vue.js
+## 🤔 Reflexión
 
-### Desafíos que podría enfrentar FrontTech al migrar a Vue.js desde un enfoque tradicional HTML+JS
+### ¿Qué desafíos podría enfrentar FrontTech al migrar a Vue.js desde un enfoque tradicional HTML+JS?
 
 La transición desde HTML+JS puro implica un cambio de mentalidad más que de sintaxis. Los principales desafíos son:
 
@@ -268,9 +268,9 @@ La transición desde HTML+JS puro implica un cambio de mentalidad más que de si
 
 A pesar de estos desafíos, la adopción gradual de Vue — comenzando por componentes simples e integrando Vue Router y Pinia solo cuando el proyecto lo justifique — minimiza el impacto y permite al equipo aprender sin detener el desarrollo.
 
-### Vue.js puede escalar adecuadamente para un sistema más complejo
+### ¿Consideras que Vue.js puede escalar adecuadamente para un sistema más complejo? Justifica.
 
-Vue.js está diseñado para escalar desde un componente aislado hasta una aplicación empresarial completa. Las razones son:
+Sí. Vue.js está diseñado para escalar desde un componente aislado hasta una aplicación empresarial completa. Las razones son:
 
 - **Ecosistema oficial robusto**: Vue Router para enrutamiento avanzado (rutas anidadas, guards de navegación, lazy loading) y Pinia para gestión de estado global escalable son soluciones mantenidas por el core team, lo que elimina la incertidumbre de elegir librerías de terceros.
 - **Composables**: La Composition API permite extraer y reutilizar lógica compleja en funciones (`useUsuario`, `useTareas`), evitando la duplicación de código en proyectos grandes.
