@@ -1,4 +1,4 @@
-# 📝 PROYECTO ABP M6: FrontTech Prototipo Vue
+# 📝 Análisis de Caso: FrontTech Prototipo Vue
 
 ![Estado del Proyecto](https://img.shields.io/badge/Estado-Finalizado-yellow)
 ![Stack](https://img.shields.io/badge/Stack-Vue.js_3_%7C_Vue_Router_%7C_Bootstrap_5_%7C_CSS-blue)
